@@ -86,7 +86,7 @@ func UpdateUser(c *gin.Context) {
 
 	u := dal.User
 
-	user, err := u.Where(u.ID.Eq(uint(intID))).First()
+	_, err = u.Where(u.ID.Eq(uint(intID))).First()
 	if err != nil {
 		c.JSON(404, gin.H{"error": "User not found"})
 		return
@@ -108,7 +108,7 @@ func UpdateUser(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, user)
+	c.JSON(200, gin.H{"message": "successfully update user"})
 }
 
 // DeleteUser deletes a user by ID.
