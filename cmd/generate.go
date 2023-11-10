@@ -31,7 +31,7 @@ func main() {
 		Mode:         gen.WithoutContext | gen.WithDefaultQuery,
 	})
 
-	db, _ := gorm.Open(mysql.Open("root:amintaba12345@tcp(127.0.0.1:3306)/intikom_test?charset=utf8mb4&parseTime=True&loc=Local"))
+	db, _ := gorm.Open(mysql.Open("root:tT£91F]y3[LV@tcp(127.0.0.1:3306)/intikom_test?charset=utf8mb4&parseTime=True&loc=Local"))
 
 	g.UseDB(db)
 
